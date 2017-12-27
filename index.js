@@ -4,7 +4,8 @@ const path = require('path');
 const app = express();
 const port = 8000;
 
-app.use(express.static(path.join(__dirname, 'client/my-app/src')));
+// set sratic resource path
+app.use(express.static(path.join(__dirname, 'my-app/dist')));
 
 require('./routes')(app);
 app.listen(port, () => {
